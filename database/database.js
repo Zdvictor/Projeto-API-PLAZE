@@ -3,10 +3,10 @@ const knex = require("knex")({
         client: "mysql2",
         connection: {
 
-            host: process.env.HOST,
-            user: process.env.USER,
-            password: process.env.PASSWORD,
-            database: process.env.DBNAME
+            host: process.env.DB_HOST,
+            user: process.env.DB_USERNAME,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_DBNAME
 
 
 
