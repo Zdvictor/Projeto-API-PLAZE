@@ -1,0 +1,26 @@
+{
+  "name": "api_plaze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.10.2",
+    "nodemon": "^3.1.4"
+  }
+}
