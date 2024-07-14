@@ -2,6 +2,10 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const router = require('./routes/routes')
+const cors = require("cors")
+
+
+app.use(cors())
 
 const port = process.env.PORT || 8080
 
