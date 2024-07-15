@@ -115,16 +115,43 @@ class User {
 
         if(result.status){
 
+            console.log(salt)
             var token = jwt.sign({data: result.data}, salt)
-
+            res.status(200)
             res.json({token: token})
 
         }else {
 
+            res.status(404)
             res.json({err: result.err})
 
 
         }
+    }
+
+
+    async verify(req,res) {
+
+        var token = req.headers['authorization'].split(' ')[1]
+       
+        var dados = jwt.verify(token,salt, (err, decoded) => {
+
+            if(err) {
+
+                res.status(404)
+                res.json({err: "Token Invalido"})
+
+            }else {
+
+                res.status(200)
+                res.json(decoded)
+
+            }
+
+
+        })
+
+
     }
 
     
