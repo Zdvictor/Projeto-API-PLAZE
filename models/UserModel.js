@@ -84,7 +84,7 @@ class UserModel {
 
             var hash = await bcrypt.hash(password, 10)
 
-            await knex.insert({user,email,password: hash,data,cdgoafiliado: cdg}).into('users')
+            await knex.insert({user,email,password: hash,data,cdgafiliado: cdg}).into('users')
 
             return true
 
