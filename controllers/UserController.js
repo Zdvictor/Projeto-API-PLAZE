@@ -132,7 +132,7 @@ class User {
 
     async verify(req,res) {
 
-        var token = req.headers['authorization'].split(' ')[1]
+        var token = req.body.token
        
         var dados = jwt.verify(token,salt, (err, decoded) => {
 
